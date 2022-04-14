@@ -11,11 +11,11 @@ class MultipliesSpec extends AnyFlatSpec with should.Matchers {
     sumOfMultiplies(10) shouldBe 23
   }
 
-  it should "return value of 98 after adding together multiplies of 3 and 5 (3, 5, 6, 9, 10, 12, 15, 18)" in {
+  it should "return value of 78 after adding together multiplies of 3 and 5 (3, 5, 6, 9, 10, 12, 15, 18)" in {
     sumOfMultiplies(20) shouldBe 78
   }
 
-  it should "return value of 98 after adding together multiplies of 3 and 5 (3, 5, 6, 9, 10, 12, 15, 18..., 999)" in {
+  it should "return value of 233168 after adding together multiplies of 3 and 5 (3, 5, 6, 9, 10, 12, 15, 18..., 999)" in {
     sumOfMultiplies(1000) shouldBe 233168
   }
 }
