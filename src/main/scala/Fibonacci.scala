@@ -1,11 +1,16 @@
+import scala.annotation.tailrec
+
 object Fibonacci {
 
-  def fibonacciSequence(h: Int, n: Int): List[Int] = {
-    if (h > 100) {
-      Nil
-    } else {
-      h :: fibonacciSequence(n, h + n)
+  def fibonacci(n: Int): Int = {
+    @tailrec
+    def fibonacciRecursive(i: Int, last: Int, nextToLast: Int): Int = {
+      if (i >= n) last
+      else fibonacciRecursive(i + 1, last + nextToLast, last)
     }
+
+    if (n <= 2) 1
+    else fibonacciRecursive(2, 1, 1)
   }
 
 }
